@@ -1,6 +1,6 @@
 module AutoOffload
 
-using LinearAlgebra, AbstractFFTs
+using LinearAlgebra, AbstractFFTs, FFTW
 
 @static if Base.find_package("CuArrays") !== nothing
     using CuArrays
@@ -58,7 +58,7 @@ function accelerated_fft!(A)
     if GPU_SUPPORTED && size(A,1) > AUTO_GPU_SIZE && b isa Array
         A .= Array(fft!(cuify(A)))
     else
-        fft!(A)
+        FFTW.fft!(A)
     end
 end
 
