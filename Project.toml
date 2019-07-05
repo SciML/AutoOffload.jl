@@ -1,0 +1,7 @@
+name = "AutoOffload"
+uuid = "f0abef60-9ec0-11e9-27de-db6506a91768"
+authors = ["Chris Rackauckas <accounts@chrisrackauckas.com>"]
+version = "0.1.0"
+
+[compat]
+julia = "1"
