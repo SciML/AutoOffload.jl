@@ -9,6 +9,12 @@ to attempt to automatically determine cutoff points for which offloading
 to an accelerator makes sense, and then utilize this so that all other libraries
 auto-GPU/TPU/distribute/etc. when appropriate.
 
+## Installation
+
+AutoOffload.jl does not depend on the accelerator libraries. Thus in order to
+allow usage of an accelerator, you must have already installed it. For example,
+for GPU offloading, we require that you have done `]add CuArrays`.
+
 ## Design Goal
 
 The goal is to have an `autotune()` function which runs some benchmarks to
