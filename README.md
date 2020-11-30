@@ -1,5 +1,7 @@
 # AutoOffload.jl
 
+[![Build Status](https://github.com/SciML/AutoOffload.jl/workflows/CI/badge.svg)](https://github.com/SciML/AutoOffload.jl/actions?query=workflow%3ACI)
+
 AutoOffload.jl is an experimental library looking into automatic offloading
 of costly computations to accelerators like GPUs for user-friendly speedups.
 While not as efficient as an algorithm fully designed to stay on an accelerator
